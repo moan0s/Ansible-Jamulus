@@ -2,7 +2,7 @@
 
 To configure the playbook, you need to have done the following things:
 
-- have a ubuntu or debian server where jamulus will run. Hetzners CX11 is a very reliable and reasonably cheap (<5€/month) server and set up in minutes. Use [this link]([Hetzner](https://hetzner.cloud/?ref=B77yGmfF39CQ)) to have a credit of 20€ (affiliate link).
+- have an ubuntu or debian server where jamulus will run. Hetzners CX11 is a very reliable and reasonably cheap (<5€/month) server and set up in minutes. Use [this link]([Hetzner](https://hetzner.cloud/?ref=B77yGmfF39CQ)) to have a credit of 20€ (affiliate link).
 - [configured your DNS records](configuring-dns.md)
 - [retrieved the playbook's source code](getting-the-playbook.md) to your computer
 
