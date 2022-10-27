@@ -1,0 +1,3 @@
+---
+
+jamulus_port: 9100 # this will do nothing as 9100 is already the default port

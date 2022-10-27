@@ -1,0 +1,2 @@
+[jam_servers]
+jamserver1 ansible_host=jamulus.example.com
