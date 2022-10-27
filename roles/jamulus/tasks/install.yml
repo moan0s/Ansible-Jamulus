@@ -1,14 +1,10 @@
 ---
 
 - block:
-    - name: "Ansible | Print a variable"
-      debug:
-        msg: "https://github.com/jamulussoftware/jamulus/releases/download/{{ jamulus_release_tag }}/jamulus_headless_{{ jamulus_version }}_ubuntu_{{ go_arch }}.deb"
     - name: Download jamulus binary to local folder
       become: false
       get_url:
         url: "https://github.com/jamulussoftware/jamulus/releases/download/{{ jamulus_release_tag }}/jamulus-headless_{{ jamulus_version }}_ubuntu_{{ go_arch }}.deb"
-            #"https://github.com/jamulussoftware/jamulus/releases/download/r3_9_1/jamulus-headless_3.9.1_ubuntu_amd64.deb"
         dest: "/tmp/jamulus-{{ jamulus_version }}.ubuntu-{{ go_arch }}.deb"
         mode: '0644'
       register: _download_deb
