@@ -1,0 +1,42 @@
+---
+- name: Copy the jamulus systemd service file
+  template:
+    src: jamulus.service.j2
+    dest: /etc/systemd/system/jamulus.service
+    owner: root
+    group: root
+    mode: 0644
+  notify: restart jamulus
+
+- block:
+    - name: Create jamulus config directory
+      file:
+        path: "/etc/jamulus"
+        state: directory
+        owner: root
+        group: root
+        mode: u+rwX,g+rwX,o=rX
+
+    - name: Copy the jamulus config file
+      template:
+        src: config.yaml.j2
+        dest: /etc/jamulus/config.yaml
+        owner: root
+        group: root
+        mode: 0644
+      notify: restart jamulus
+  when:
+    ( jamulus_tls_server_config | length > 0 ) or
+    ( jamulus_http_server_config | length > 0 ) or
+    ( jamulus_basic_auth_users | length > 0 )
+
+- name: Create textfile collector dir
+  file:
+    path: "{{ jamulus_textfile_dir }}"
+    state: directory
+    owner: "{{ _jamulus_system_user }}"
+    group: "{{ _jamulus_system_group }}"
+    recurse: true
+    mode: u+rwX,g+rwX,o=rX
+  when: jamulus_textfile_dir | length > 0
+
