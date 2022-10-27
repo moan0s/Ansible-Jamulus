@@ -18,10 +18,10 @@ We recommend using the [git](https://git-scm.com/) tool to get the playbook's so
 Once you've installed git on your computer, you can go to any directory of your choosing and run the following command to retrieve the playbook's source code:
 
 ```bash
-git clone https://github.com/moan0s/ansible-monitoring.git
+git clone https://github.com/moan0s/ansible-jamulus
 ```
 
-This will create a new `ansible-monitoring` directory.
+This will create a new `ansible-jamulus` directory.
 You're supposed to execute all other installation commands inside that directory.
 
 
@@ -30,9 +30,9 @@ You're supposed to execute all other installation commands inside that directory
 Alternatively, you can download the playbook as a ZIP archive.
 This is not recommended, as it's not easy to keep up to date with future updates. We suggest you [use git](#using-git-to-get-the-playbook) instead.
 
-The latest version is always at the following URL: https://github.com/moan0s/ansible-monitoring/archive/main.zip
+The latest version is always at the following URL: https://github.com/moan0s/ansible-jamulus/archive/main.zip
 
-You can extract this archive anywhere. You'll get a directory called `ansible-monitoring`.
+You can extract this archive anywhere. You'll get a directory called `ansible-jamulus`.
 You're supposed to execute all other installation commands inside that directory.
 
 
