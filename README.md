@@ -1,3 +1,5 @@
+![Jamulus banner](docs/assets/jamulusbannersmall.png)
+
 # Jamulus server deployment with Ansible
 
 Jamulus is for playing, rehearsing, or just jamming with your friends, your band or just anyone you find online.
