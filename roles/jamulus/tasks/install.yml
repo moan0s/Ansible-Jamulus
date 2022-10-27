@@ -13,9 +13,10 @@
       delay: 2
       check_mode: false
       when: jamulus_check_deb.rc == 1
-
     - name: Install jamulus
-      apt: deb="/tmp/jamulus-{{ jamulus_version }}.ubuntu-{{ go_arch }}.deb"
+      apt:
+        deb: "/tmp/jamulus-{{ jamulus_version }}.ubuntu-{{ go_arch }}.deb"
+        update_cache: yes
       #notify: restart jamulus
       when: jamulus_check_deb.rc == 1
     - name: restart jamulus
